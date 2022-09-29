@@ -364,3 +364,15 @@ textarea {
 /* =============
     Footer
 ============= */
+#hero {
+  background-image: url("../img/hero.jpg");
+  height: 80vh;
+  background-size: cover;
+  background-position: center bottom;
+}
+#hero #overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
