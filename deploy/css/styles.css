@@ -427,3 +427,9 @@ textarea {
     height: 70vh;
   }
 }
+#hero #ghost {
+  max-height: 400px;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
