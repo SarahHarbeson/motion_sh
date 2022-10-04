@@ -373,7 +373,7 @@ textarea {
 ============= */
 #hero {
   background-image: url("../img/hero.jpg");
-  height: 60vh;
+  height: 50vh;
   background-size: cover;
   background-position: center bottom;
 }
@@ -395,6 +395,7 @@ textarea {
 @media (min-width: 1024px) {
   #hero #content h1 {
     font-size: 3.75rem;
+    margin-top: -100px;
   }
 }
 #hero #content button {
@@ -418,11 +419,11 @@ textarea {
 }
 @media (min-width: 768px) {
   #hero #content {
-    height: 70vh;
+    height: 60vh;
   }
 }
 @media (min-width: 1024px) {
   #hero #content {
-    height: 80vh;
+    height: 70vh;
   }
 }

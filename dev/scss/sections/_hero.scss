@@ -1,6 +1,6 @@
 #hero{
     background-image: url("../img/hero.jpg");
-    height: 60vh;
+    height: 50vh;
     background-size: cover;
     background-position: center bottom;
 
@@ -20,6 +20,7 @@
         
             @include lg{
                 font-size: rem-calc(60);
+                margin-top: -100px; 
             }
 
   
@@ -46,11 +47,11 @@
     }
 
     @include md{
-        height: 70vh;
+        height:60vh;
     }
 
     @include lg{
-        height: 80vh;
+        height: 70vh;
     }
 
 }
