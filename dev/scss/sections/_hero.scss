@@ -3,6 +3,8 @@
     height: 30vh;
     background-size: cover;
     background-position: center bottom;
+    overflow: hidden; 
+
 
     #text {
         display: flex;
@@ -73,32 +75,36 @@
 
 #ghost-1 {
     max-height: 400px;
-    padding: 50px; 
-    opacity: 60%; 
+    padding: 60px; 
+    opacity: 70%; 
   }
 
   #ghost-2 {
     max-height: 200px;
-    padding: 30px; 
-    opacity: 60%; 
+    padding: 10px; 
+    margin-bottom: 50px; 
+    margin-left: -80px; 
+    opacity: 70%; 
   }
   
   #ghost-3 {
     max-height: 500px;
-    padding: 40px; 
-    opacity: 60%; 
+    padding: -190px; 
+    opacity: 70%; 
   }
 
   #ghost-4 {
     max-height: 400px;
-    padding: 30px; 
-    opacity: 60%; 
+    padding: 10px; 
+    margin-left: 50px; 
+    opacity: 70%; 
   }
 
   #ghost-5 {
     max-height: 300px;
-    padding: -5px; 
-    opacity: 60%; 
+    padding: -20px; 
+    margin-left: 50px; 
+    opacity: 70%; 
   }
 
 }
