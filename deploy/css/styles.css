@@ -410,12 +410,6 @@ textarea {
   border-radius: 8px;
   cursor: pointer;
 }
-#hero #text button i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
 @media (min-width: 768px) {
   #hero #text button {
     font-size: 1.25rem;
@@ -429,7 +423,9 @@ textarea {
   }
 }
 #hero #text button i {
-  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   #hero {
@@ -444,25 +440,25 @@ textarea {
 #hero #ghost-1 {
   max-height: 400px;
   padding: 50px;
-  opacity: 50%;
+  opacity: 60%;
 }
 #hero #ghost-2 {
   max-height: 200px;
   padding: 30px;
-  opacity: 50%;
+  opacity: 60%;
 }
 #hero #ghost-3 {
   max-height: 500px;
   padding: 40px;
-  opacity: 50%;
+  opacity: 60%;
 }
 #hero #ghost-4 {
   max-height: 400px;
   padding: 30px;
-  opacity: 50%;
+  opacity: 60%;
 }
 #hero #ghost-5 {
   max-height: 300px;
   padding: -5px;
-  opacity: 50%;
+  opacity: 60%;
 }

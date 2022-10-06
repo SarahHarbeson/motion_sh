@@ -30,7 +30,7 @@
   
         }
         
-        button{
+        button {
             border: none;
             background-color: var(--orange);
             color: var(--white);
@@ -38,26 +38,24 @@
             padding: 10px 15px;
             border-radius: 8px;
             cursor: pointer;
-
-            i{
-                display: flex; 
-                align-items: center; 
-                justify-content: center; 
-                margin-right: 10px; 
-            }
             
             @include md{
                 font-size: rem-calc(20);
                 padding: 15px 20px;
+
             }
 
             @include lg{
                 font-size: rem-calc(25);
                 padding: 20px 30px;
+          
             }
 
             i{
-                margin-left: 8px;
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center; 
+                 
             }
         
     }
@@ -76,31 +74,31 @@
 #ghost-1 {
     max-height: 400px;
     padding: 50px; 
-    opacity: 50%; 
+    opacity: 60%; 
   }
 
   #ghost-2 {
     max-height: 200px;
     padding: 30px; 
-    opacity: 50%; 
+    opacity: 60%; 
   }
   
   #ghost-3 {
     max-height: 500px;
     padding: 40px; 
-    opacity: 50%; 
+    opacity: 60%; 
   }
 
   #ghost-4 {
     max-height: 400px;
     padding: 30px; 
-    opacity: 50%; 
+    opacity: 60%; 
   }
 
   #ghost-5 {
     max-height: 300px;
     padding: -5px; 
-    opacity: 50%; 
+    opacity: 60%; 
   }
 
 }
