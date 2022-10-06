@@ -15,18 +15,31 @@ var mainTl = gsap.timeline();
 mainTl.add(heroAnimation()); 
 
 
+ var heroSizeNumber = 1; 
+
+let mm = gsap.matchMedia(); 
+
+mm.add("(min-width: 768px)", () => {
+heroSizeNumber = 2; 
+}); 
+
+mm.add("(max-width: 768px)", () => {
+    heroSizeNumber = 1.25; 
+ }); 
+    
+
 
 
 let trailBtn = document.querySelector("#trails-btn");
 
 
 var buttonAnimation = gsap.timeline({paused:true}); 
-buttonAnimation.to("#trails-btn",{duration:1, scale:2})
+buttonAnimation.to("#trails-btn",{duration:1, scale:heroSizeNumber}, "goAway")
 
     .to("#trails-btn i",{duration: 1, rotateY:180})
 
-    .to("#first-line",{duration: 1, alpha:0, y:50})
-    .to("#second-line",{duration: 1, alpha:0, y:20});
+    .to("#first-line",{duration: 1, alpha:0, y:50}, "goAway")
+    .to("#second-line",{duration: 1, alpha:0, y:20}, "goAway");
 
 
 
