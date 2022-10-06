@@ -1,26 +1,30 @@
 #hero{
     background-image: url("../img/hero.jpg");
-    height: 50vh;
+    height: 30vh;
     background-size: cover;
     background-position: center bottom;
 
-    #content {
+    #text {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
+    
 
         h1{
             color: var(--white);
             font-size: rem-calc(20);
+            padding: 20px; 
+            margin-top: 60px; 
 
             @include md{
                 font-size: rem-calc(40);
+                margin-top: 70px; 
             }
         
             @include lg{
                 font-size: rem-calc(60);
-                margin-top: -100px; 
+                margin-top: 110px; 
             }
 
   
@@ -30,13 +34,24 @@
             border: none;
             background-color: var(--orange);
             color: var(--white);
-            font-size: rem-calc(20);
+            font-size: rem-calc(12); 
             padding: 10px 15px;
             border-radius: 8px;
-            margin-top: 24px;
             cursor: pointer;
 
+            i{
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                margin-right: 10px; 
+            }
+            
             @include md{
+                font-size: rem-calc(20);
+                padding: 15px 20px;
+            }
+
+            @include lg{
                 font-size: rem-calc(25);
                 padding: 20px 30px;
             }
@@ -44,23 +59,48 @@
             i{
                 margin-left: 8px;
             }
-    }
-
-    @include md{
-        height:60vh;
-    }
-
-    @include lg{
-        height: 70vh;
+        
     }
 
 }
 
-#ghost {
+@include md{
+    height:40vh;
+}
+
+@include lg{
+    height: 50vh;
+}
+
+
+#ghost-1 {
     max-height: 400px;
-    display: flex; 
-    align-items: right; 
-    justify-content: right; 
+    padding: 50px; 
+    opacity: 50%; 
+  }
+
+  #ghost-2 {
+    max-height: 200px;
+    padding: 30px; 
+    opacity: 50%; 
   }
   
+  #ghost-3 {
+    max-height: 500px;
+    padding: 40px; 
+    opacity: 50%; 
+  }
+
+  #ghost-4 {
+    max-height: 400px;
+    padding: 30px; 
+    opacity: 50%; 
+  }
+
+  #ghost-5 {
+    max-height: 300px;
+    padding: -5px; 
+    opacity: 50%; 
+  }
+
 }
