@@ -1,36 +1,56 @@
 import { gsap } from "gsap";
 
-gsap.from("#first-line",{duration: 1.5, alpha:0, y:-100});
-gsap.to("#ghost-1", {duration: 4, alpha:0, y:-400}); 
-gsap.to("#ghost-2", {duration: 4, alpha:0, y:-400, delay: 1}); 
-gsap.to("#ghost-3", {duration: 4, alpha:0, y:-400}); 
-gsap.to("#ghost-4", {duration: 4, alpha:0, y:-400, delay: 0.5}); 
-gsap.to("#ghost-5", {duration: 4, alpha:0, y:-400, delay: 1}); 
-//gsap.from("#boo-btn",{duration: 1, alpha:0, y:50, delay:0.75});
-//gsap.from("#boo-btn i",{duration: 1, alpha:0, rotation:180, delay:0.75});
 
-let BooBtn = document.querySelector("#boo-btn")
+function heroAnimation(){
+    var tl = gsap.timeline(); 
+tl.from("#first-line",{duration: 0.5, alpha:0, y:-100})
+    .from("#boo-btn i",{duration: 0.5, alpha:0, rotation:180})
+    .to("#ghost-3", {duration: .75, alpha:0, y:-300})
+    .to("#ghost-4", {duration: .75, alpha:0, y:-500})
+    .to("#ghost-1", {duration: .75, alpha:0, y:-400})
+    .to("#ghost-2", {duration: 1, alpha:0, y:-650})
+    .to("#ghost-5", {duration: .75, alpha:0, y:-560})
+    return tl; 
 
-BooBtn.addEventListener("mouseover",function(){
-    gsap.to("#boo-btn",{duration:1, scale:1.25});
+}
 
-    gsap.to("#boo-btn i",{duration: 1, rotation: 360});
-    gsap.to("#ghost-1", {duration:1, opacity: .6}); 
-    gsap.to("#ghost-2", {duration:1, opacity: .6}); 
-    gsap.to("#ghost-3", {duration:1, opacity: .6}); 
-    gsap.to("#ghost-4", {duration:1, opacity: .6}); 
-    gsap.to("#ghost-5", {duration:1, opacity: .6}); 
+var mainTl = gsap.timeline();
+mainTl.add(heroAnimation()); 
 
+var heroSizeNumber = 1; 
+
+let mm = gsap.matchMedia(); 
+
+mm.add("(min-width: 768px)", () => {
+heroSizeNumber = 2; 
+}); 
+
+mm.add("(max-width: 768px)", () => {
+    heroSizeNumber = 1.25; 
+ }); 
+    
+
+let booBtn = document.querySelector("#boo-btn");
+
+var buttonAnimation = gsap.timeline({paused:true}); 
+buttonAnimation.to("#boo-btn",{duration:1, scale:heroSizeNumber}, "goAway")
+
+    .to("#first-line",{duration: 1, alpha:0, y:50}, "goAway")
+
+        .to("#boo-btn i",{duration: .5, rotation: 360})
+        .to("#ghost-3", {duration:.25, opacity: .6})
+        .to("#ghost-5", {duration:.25, opacity: .6})
+        .to("#ghost-1", {duration:.25, opacity: .6})
+        .to("#ghost-2", {duration:.25, opacity: .6})
+        .to("#ghost-4", {duration:.25, opacity: .6});
+ 
+
+booBtn.addEventListener("mouseover",function(){
+buttonAnimation.play(); 
 })
 
-BooBtn.addEventListener("mouseout",function(){
-    gsap.to("#boo-btn",{duration:1, scale:1});
+booBtn.addEventListener("mouseout",function(){
+    buttonAnimation.reverse(); 
+})
 
-    gsap.to("#ghost-1", {duration:1, opacity: 0}); 
-    gsap.to("#ghost-2", {duration:1, opacity: 0}); 
-    gsap.to("#ghost-3", {duration:1, opacity: 0}); 
-    gsap.to("#ghost-4", {duration:1, opacity: 0}); 
-    gsap.to("#ghost-5", {duration:1, opacity: 0}); 
 
- 
-});

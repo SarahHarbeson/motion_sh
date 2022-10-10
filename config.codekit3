@@ -9,12 +9,12 @@
   ],
   "creatorBuild" : "34434",
   "files" : {
-    "\/assets\/vino-li-W1py5swbJZY-unsplash.jpg" : {
+    "\/assets\/daniel-leone-g30P1zcOzXo-unsplash.jpg" : {
       "ft" : 16384,
-      "iS" : 1863837,
+      "iS" : 833978,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/vino-li-W1py5swbJZY-unsplash.jpg",
+      "oAP" : "\/assets\/daniel-leone-g30P1zcOzXo-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -34,22 +34,9 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/deploy\/img\/ghost.png" : {
-      "ft" : 32768,
-      "iS" : 2683683,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/ghost.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/deploy\/img\/hero.jpg" : {
       "ft" : 16384,
-      "iS" : 435760,
+      "iS" : 98619,
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/img\/hero.jpg",
@@ -87,14 +74,6 @@
       "oAP" : "\/dev\/content\/hero.html",
       "oF" : 0
     },
-    "\/dev\/global\/footer.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/dev\/global\/footer.html",
-      "oF" : 0
-    },
     "\/dev\/global\/footer.kit" : {
       "cB" : 0,
       "ft" : 2048,
@@ -109,14 +88,6 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/global\/head.html",
-      "oF" : 0
-    },
-    "\/dev\/global\/header.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/dev\/global\/header.html",
       "oF" : 0
     },
     "\/dev\/global\/header.kit" : {
