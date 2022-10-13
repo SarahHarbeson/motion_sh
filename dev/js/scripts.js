@@ -28,6 +28,7 @@ heroSizeNumber = 2;
 mm.add("(max-width: 768px)", () => {
     heroSizeNumber = 1.25; 
  }); 
+
     
 
 let booBtn = document.querySelector("#boo-btn");

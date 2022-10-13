@@ -74,38 +74,113 @@
 
 
 #ghost-1 {
+
+  max-height: 60px;
+  padding: 10px; 
+  opacity: 70%; 
+  margin-left: 20px; 
+  margin-top: 100px; 
+
+
+  @include md{
+
+    max-height: 200px;
+   padding: 60px; 
+    opacity: 70%; 
+}
+
+@include lg{
+
     max-height: 400px;
     padding: 60px; 
     opacity: 70%; 
   }
+}
 
   #ghost-2 {
+
+    max-height: 70px;
+    padding: 10px; 
+    opacity: 70%; 
+
+    @include md{
+      max-height: 100px;
+      padding: 10px; 
+      margin-bottom: 50px; 
+      margin-left: -80px; 
+      opacity: 70%; 
+  }
+  
+  @include lg{
     max-height: 200px;
     padding: 10px; 
     margin-bottom: 50px; 
     margin-left: -80px; 
     opacity: 70%; 
-  }
+  }} 
   
   #ghost-3 {
+
+    max-height: 40px;
+    padding: 10px; 
+    opacity: 70%; 
+
+
+    @include md{
+      max-height: 150px;
+     padding: -190px; 
+      opacity: 70%; 
+      margin-top: 150px; 
+  }
+  
+  @include lg{
+
     max-height: 500px;
     padding: -190px; 
     opacity: 70%; 
     margin-top: 150px; 
-  }
+  }}
+
 
   #ghost-4 {
+
+    max-height: 45px;
+    padding: 10px; 
+    margin-left: 50px; 
+    opacity: 70%; 
+
+    @include md{
+      max-height: 200px;
+      padding: 10px; 
+      margin-left: 50px; 
+      opacity: 70%; 
+  }
+  
+  @include lg{
     max-height: 400px;
     padding: 10px; 
     margin-left: 50px; 
     opacity: 70%; 
-  }
+  }}
 
   #ghost-5 {
+
+    max-height: 70px;
+    padding: 10px; 
+    opacity: 70%; 
+
+    @include md{
+      max-height: 100px;
+      padding: -20px; 
+      margin-left: 50px; 
+      opacity: 70%; 
+  }
+  
+  @include lg{
     max-height: 300px;
     padding: -20px; 
     margin-left: 50px; 
     opacity: 70%; 
-  }
+  }} 
 
 }
