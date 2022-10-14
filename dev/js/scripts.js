@@ -1,4 +1,3 @@
-// console.log("hello class");
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -34,19 +33,32 @@ function heroAnimation(){
 }
 
 function boxAnimation(){
-    var tl = gsap.timeline({scrollTrigger:{trigger: "#box", markers: true, scrub: true, start:"top 70%", end:"bottom 10%"}}); 
-    tl.from("#box", {duration:1, scale:2, rotation: -100, x:"-=300"})
-    .to("#box", {duration:1, y:400, scale:2}); 
-
-    return tl; 
+    var tl = gsap.timeline({scrollTrigger:{trigger: "#box", scrub: true, start:"top 70%", end:"bottom 10%",markers: false}});
+    tl.from("#box",{duration:1, scale:2, rotation:-180, x:"-=300%"});
+    // .to("#box",{duration:1, y:400, scale:2});
+    return tl;
 }
+
 
 function hikingAnimation(){
-    var tl = gsap.timeline({scrollTrigger:{trigger:"#hiking", scrub: true, marker: true, end:"top 20%", start:"top 90%"}}); 
-    tl.from("#hiking aside div", {duration:1, scale:3, alpha:0 })
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#hiking",scrub:true, markers: false, end:"top 20%", start:"top 70%"}});
+    tl.from("#hiking aside div",{duration:1,scale:3,alpha:0},"peakAni")
+    .from("#hiking h1",{alpha:0, y:-100,duration:1},"peakAni")
+    .from("#hiking p",{alpha:0, y:-100,duration:1},"peakAni");
+    return tl;
 }
+
+function hero2Animation(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#hero-2", scrub: true,end:"top 40%", markers: true, start:"top 80%"}});
+
+    tl.from("#bg-img",{duration:1, clipPath:"inset(0 50%)"},"same")
+    .from("#hero-2 h1",{duration:1, scale:2, alpha:0},"same");
+    return tl;
+}
+
 
 var mainTimeline = gsap.timeline();
 mainTimeline.add(heroAnimation())
     .add(boxAnimation())
-    .add(hikingAnimation());
+    .add(hikingAnimation())
+    .add(hero2Animation());
