@@ -546,3 +546,16 @@ textarea {
     opacity: 70%;
   }
 }
+
+#section2 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  overflow: hidden;
+}
+#section2 i {
+  height: 400px;
+  color: var(--orange);
+}

@@ -1,0 +1,13 @@
+#section2{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black);
+    overflow: hidden; 
+
+    i{
+        height: 400px; 
+        color: var(--orange);
+    }
+}

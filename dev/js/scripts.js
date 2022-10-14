@@ -1,4 +1,8 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 
 function heroAnimation(){
@@ -14,8 +18,6 @@ tl.from("#first-line",{duration: 0.5, alpha:0, y:-100})
 
 }
 
-var mainTl = gsap.timeline();
-mainTl.add(heroAnimation()); 
 
 var heroSizeNumber = 1; 
 
@@ -55,3 +57,20 @@ booBtn.addEventListener("mouseout",function(){
 })
 
 
+
+function crossbones(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#crossbones", 
+    scrub: true,
+    markers: true, 
+    end:"top 20%",
+    start:"top 70%"
+    }})
+
+    .to("#crossbones",{duration:2, scale:6, alpha:0},"same");
+    return tl;
+}
+
+
+var mainTl = gsap.timeline();
+mainTl.add(heroAnimation())
+.add(crossbones()); 
