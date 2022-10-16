@@ -66,9 +66,12 @@ function crossbones(){
     start:"top 70%"
     }})
 
-    .to("#crossbones",{duration:2, scale:6, alpha:0},"same");
+    .to("#crossbones",{duration:2, scale:7, alpha:0},"same")
+    .from("#content2",{alpha:0, y:-100, duration: 2},"same")
+
     return tl;
 }
+
 
 
 var mainTl = gsap.timeline();

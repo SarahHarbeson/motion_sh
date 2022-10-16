@@ -3,11 +3,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; 
     background-color: var(--black);
     overflow: hidden; 
 
-    i{
-        height: 400px; 
+    i{ 
         color: var(--orange);
+    }
+
+    #content2{
+        font-size: 16px;
+        color: var(--white); 
+        text-align: left; 
+        width: 450px; 
+        padding: 20px; 
     }
 }
