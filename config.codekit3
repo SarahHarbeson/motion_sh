@@ -9,6 +9,27 @@
   ],
   "creatorBuild" : "34434",
   "files" : {
+    "\/assets\/images\/sabina-music-rich-OJy0JHnoUZQ-unsplash.jpg" : {
+      "ft" : 16384,
+      "iS" : 276521,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/images\/sabina-music-rich-OJy0JHnoUZQ-unsplash.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/sabina-music-rich-OJy0JHnoUZQ-unsplash.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/sabina-music-rich-OJy0JHnoUZQ-unsplash.html",
+      "oF" : 0
+    },
     "\/assets\/vino-li-W1py5swbJZY-unsplash.jpg" : {
       "ft" : 16384,
       "iS" : 1863837,
