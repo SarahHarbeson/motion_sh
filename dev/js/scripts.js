@@ -34,6 +34,7 @@ mm.add("(max-width: 768px)", () => {
     
 
 let booBtn = document.querySelector("#boo-btn");
+let ticketsBtn = document.querySelector("#tickets-btn");
 
 var buttonAnimation = gsap.timeline({paused:true}); 
 buttonAnimation.to("#boo-btn",{duration:1, scale:heroSizeNumber}, "goAway")
@@ -58,6 +59,7 @@ booBtn.addEventListener("mouseout",function(){
 
 
 
+
 function crossbones(){
     var tl = gsap.timeline({scrollTrigger:{trigger:"#crossbones", 
     scrub: true,
@@ -71,6 +73,20 @@ function crossbones(){
 
     return tl;
 }
+
+
+
+var buttonAnimation2 = gsap.timeline({paused:true}); 
+buttonAnimation2.to("#tickets-btn",{duration:1, scale:heroSizeNumber}, "goAway")
+
+ticketsBtn.addEventListener("mouseover",function(){
+buttonAnimation2.play(); 
+})
+
+ticketsBtn.addEventListener("mouseout",function(){
+        buttonAnimation2.reverse(); 
+    })
+
 
 
 

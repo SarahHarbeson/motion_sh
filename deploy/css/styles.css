@@ -559,6 +559,10 @@ textarea {
 #section2 i {
   color: var(--orange);
 }
+#section2 h1 {
+  text-align: center;
+  color: var(--orange);
+}
 #section2 #content2 {
   font-size: 16px;
   color: var(--white);
@@ -572,16 +576,44 @@ textarea {
   display: flex;
   justify-content: flex-start;
   align-items: left;
-  flex-direction: column;
+  flex-direction: row;
   background-color: var(--black);
   overflow: hidden;
 }
+#ghoul #ghoulstext {
+  flex-direction: column;
+  margin-left: 150px;
+}
 #ghoul h1 {
   color: var(--orange);
-  margin-left: 100px;
 }
 #ghoul p {
   color: var(--white);
   width: 400px;
-  margin-left: 100px;
+}
+#ghoul #skeleton {
+  max-width: 500px;
+  padding: 200px;
+}
+#ghoul #tickets-btn {
+  background-color: var(--orange);
+  border: 0px;
+  border-radius: 5px;
+  color: var(--white);
+  padding: 20px;
+}
+
+#footer {
+  background-image: url("../img/house.jpg");
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+#footer p {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

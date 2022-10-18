@@ -9,12 +9,12 @@
   ],
   "creatorBuild" : "34434",
   "files" : {
-    "\/assets\/karsten-winegeart-IeT84oak7HQ-unsplash.jpg" : {
+    "\/assets\/jan-jakub-nanista-z9hvkSDWMIM-unsplash.jpg" : {
       "ft" : 16384,
-      "iS" : 1747244,
+      "iS" : 456579,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/karsten-winegeart-IeT84oak7HQ-unsplash.jpg",
+      "oAP" : "\/assets\/jan-jakub-nanista-z9hvkSDWMIM-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -60,19 +60,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/deploy\/img\/dog.jpg" : {
-      "ft" : 16384,
-      "iS" : 727885,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/deploy\/img\/dog.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 0,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
     "\/deploy\/img\/ghost.png" : {
       "ft" : 32768,
       "iS" : 2683683,
@@ -92,6 +79,19 @@
       "jF" : 0,
       "oA" : 0,
       "oAP" : "\/deploy\/img\/hero.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/house.jpg" : {
+      "ft" : 16384,
+      "iS" : 263481,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/house.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,

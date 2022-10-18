@@ -1,0 +1,15 @@
+#footer{
+    background-image: url("../img/house.jpg");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; 
+
+    p{
+        color: var(--white); 
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

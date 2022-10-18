@@ -3,18 +3,36 @@
     display: flex;
     justify-content: flex-start;
     align-items: left;
-    flex-direction: column; 
+    flex-direction: row; 
     background-color: var(--black);
     overflow: hidden; 
 
+    #ghoulstext{
+        flex-direction: column; 
+        margin-left: 150px; 
+    }
+
     h1{ 
         color: var(--orange);
-        margin-left: 100px; 
     }
 
     p{
         color: var(--white);
         width: 400px; 
-        margin-left: 100px; 
     }
+
+    #skeleton { 
+       max-width: 500px; 
+       padding: 200px; 
+       
+    }
+
+    #tickets-btn {
+        background-color: var(--orange); 
+        border: 0px; 
+        border-radius: 5px; 
+        color: var(--white); 
+        padding: 20px; 
+    }
+
 }
