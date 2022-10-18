@@ -21,11 +21,22 @@
         width: 400px; 
     }
 
+    #photo{
+        padding: 200px; 
+        margin-top: -300px; 
+    }
+
     #skeleton { 
        max-width: 500px; 
-       padding: 200px; 
+     //  padding: 200px; 
        
     }
+
+    #scream { 
+        margin-bottom: -100px; 
+        max-width: 500px; 
+        
+     }
 
     #tickets-btn {
         background-color: var(--orange); 

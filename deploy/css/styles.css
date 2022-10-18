@@ -591,9 +591,16 @@ textarea {
   color: var(--white);
   width: 400px;
 }
+#ghoul #photo {
+  padding: 200px;
+  margin-top: -300px;
+}
 #ghoul #skeleton {
   max-width: 500px;
-  padding: 200px;
+}
+#ghoul #scream {
+  margin-bottom: -100px;
+  max-width: 500px;
 }
 #ghoul #tickets-btn {
   background-color: var(--orange);

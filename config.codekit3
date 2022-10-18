@@ -9,6 +9,19 @@
   ],
   "creatorBuild" : "34434",
   "files" : {
+    "\/assets\/aaaaaaaa.png" : {
+      "ft" : 32768,
+      "iS" : 81407,
+      "oA" : 0,
+      "oAP" : "\/assets\/aaaaaaaa.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/jan-jakub-nanista-z9hvkSDWMIM-unsplash.jpg" : {
       "ft" : 16384,
       "iS" : 456579,
@@ -95,6 +108,19 @@
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/deploy\/img\/scream.png" : {
+      "ft" : 32768,
+      "iS" : 34290,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/scream.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
