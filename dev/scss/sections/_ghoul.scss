@@ -1,0 +1,20 @@
+#ghoul{
+    height: 75vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    flex-direction: column; 
+    background-color: var(--black);
+    overflow: hidden; 
+
+    h1{ 
+        color: var(--orange);
+        margin-left: 100px; 
+    }
+
+    p{
+        color: var(--white);
+        width: 400px; 
+        margin-left: 100px; 
+    }
+}

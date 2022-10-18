@@ -566,3 +566,22 @@ textarea {
   width: 450px;
   padding: 20px;
 }
+
+#ghoul {
+  height: 75vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  background-color: var(--black);
+  overflow: hidden;
+}
+#ghoul h1 {
+  color: var(--orange);
+  margin-left: 100px;
+}
+#ghoul p {
+  color: var(--white);
+  width: 400px;
+  margin-left: 100px;
+}

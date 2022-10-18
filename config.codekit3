@@ -9,12 +9,12 @@
   ],
   "creatorBuild" : "34434",
   "files" : {
-    "\/assets\/images\/sabina-music-rich-OJy0JHnoUZQ-unsplash.jpg" : {
+    "\/assets\/karsten-winegeart-IeT84oak7HQ-unsplash.jpg" : {
       "ft" : 16384,
-      "iS" : 276521,
+      "iS" : 1747244,
       "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/images\/sabina-music-rich-OJy0JHnoUZQ-unsplash.jpg",
+      "oAP" : "\/assets\/karsten-winegeart-IeT84oak7HQ-unsplash.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -22,13 +22,18 @@
       "q" : 100,
       "rq" : 75
     },
-    "\/assets\/sabina-music-rich-OJy0JHnoUZQ-unsplash.html" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
+    "\/assets\/sabina-music-rich-OJy0JHnoUZQ-unsplash.jpg" : {
+      "ft" : 16384,
+      "iS" : 276521,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/sabina-music-rich-OJy0JHnoUZQ-unsplash.html",
-      "oF" : 0
+      "oAP" : "\/assets\/sabina-music-rich-OJy0JHnoUZQ-unsplash.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/assets\/vino-li-W1py5swbJZY-unsplash.jpg" : {
       "ft" : 16384,
@@ -54,6 +59,19 @@
       "oAP" : "\/deploy\/css\/styles-min.css",
       "oF" : 0,
       "pg" : 0
+    },
+    "\/deploy\/img\/dog.jpg" : {
+      "ft" : 16384,
+      "iS" : 727885,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/dog.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/deploy\/img\/ghost.png" : {
       "ft" : 32768,
@@ -81,6 +99,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/skeleton.jpg" : {
+      "ft" : 16384,
+      "iS" : 168633,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/skeleton.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/index.html" : {
       "cB" : 0,
       "ft" : 8192,
@@ -99,6 +130,14 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/dev\/content\/footer.kit" : {
+      "cB" : 0,
+      "ft" : 2048,
+      "hM" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/content\/footer.html",
+      "oF" : 0
     },
     "\/dev\/content\/ghoul.kit" : {
       "cB" : 0,
@@ -336,6 +375,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/dev\/scss\/layout\/_header.css",
+      "oF" : 0,
+      "oS" : 0,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/dev\/scss\/sections\/_footer.scss" : {
+      "aP" : 0,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/dev\/scss\/sections\/_footer.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 0,
