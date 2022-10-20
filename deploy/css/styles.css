@@ -481,7 +481,7 @@ textarea {
 }
 
 #ghoul {
-  height: 75vh;
+  height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: left;
@@ -506,10 +506,12 @@ textarea {
 }
 #ghoul #skeleton {
   max-width: 500px;
+  margin-top: -50px;
 }
 #ghoul #scream {
-  margin-bottom: -100px;
   max-width: 500px;
+  overflow: visible;
+  margin-top: 300px;
 }
 #ghoul #tickets-btn {
   background-color: var(--orange);

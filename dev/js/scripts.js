@@ -69,6 +69,7 @@ function crossbones(){
 
     .to("#crossbones",{duration:2, scale:7, alpha:0},"same")
     .from("#content2",{alpha:0, y:-100, duration: 2},"same")
+    .from("content2 h1", {alpha: 0, x:-100, duration: 1}, "same")
 
     return tl;
 }
@@ -81,7 +82,9 @@ function ghoulstext(){
     start:"top 70%"
     }})
 
-    .from("#ghoulstext",{duration:2, x:-200, alpha:0},"same")
+    .from("#ghoulstext h1",{duration:2, x:-200, alpha:0, stagger:0.5},"same")
+    .from("#ghoulstext p",{duration:4, x:-200, alpha:0, stagger:0.3},"same")
+    .from("#ghoulstext button",{duration:6, x:-200, alpha:0},"same")
 
 
     return tl;
@@ -91,11 +94,11 @@ function skeleton(){
     var tl = gsap.timeline({scrollTrigger:{trigger:"#skeleton", 
     scrub: true,
   //  markers: true, 
-    end:"bottom 60%",
+    end:"bottom 20%",
     start:"top 80%"
     }})
 
-    .from("#skeleton",{duration:2, y:-50, alpha:0},"same")
+    .from("#skeleton",{duration:2, y:-300, alpha:0},"same")
 
 
     return tl;
@@ -105,12 +108,12 @@ function scream(){
     var tl = gsap.timeline({scrollTrigger:{trigger:"#scream", 
     scrub: true,
    // markers: true, 
-    end:"bottom 25%",
-    start:"bottom 50%"
+    end:"bottom 20%",
+    start:"top 20%"
     }})
 
-    .from("#scream",{duration:2, y:-50, alpha:0},"same")
-
+    .from("#scream",{duration:2, scale:2, y:-200, alpha:0},"same")
+  
 
     return tl;
 }

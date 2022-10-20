@@ -1,5 +1,5 @@
 #ghoul{
-    height: 75vh;
+    height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: left;
@@ -29,13 +29,15 @@
     #skeleton { 
        max-width: 500px; 
      //  padding: 200px; 
+       margin-top: -50px; 
        
     }
 
     #scream { 
-        margin-bottom: -100px; 
+       // margin-bottom: -100px; 
         max-width: 500px; 
-        
+        overflow: visible; 
+        margin-top: 300px; 
      }
 
     #tickets-btn {
