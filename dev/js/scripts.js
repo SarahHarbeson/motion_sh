@@ -59,11 +59,10 @@ booBtn.addEventListener("mouseout",function(){
 
 
 
-
 function crossbones(){
     var tl = gsap.timeline({scrollTrigger:{trigger:"#crossbones", 
     scrub: true,
-    markers: true, 
+    //markers: true, 
     end:"top 20%",
     start:"top 70%"
     }})
@@ -74,7 +73,61 @@ function crossbones(){
     return tl;
 }
 
+function ghoulstext(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#ghoulstext", 
+    scrub: true,
+   // markers: true, 
+    end:"top 20%",
+    start:"top 70%"
+    }})
 
+    .from("#ghoulstext",{duration:2, x:-200, alpha:0},"same")
+
+
+    return tl;
+}
+
+function skeleton(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#skeleton", 
+    scrub: true,
+  //  markers: true, 
+    end:"bottom 60%",
+    start:"top 80%"
+    }})
+
+    .from("#skeleton",{duration:2, y:-50, alpha:0},"same")
+
+
+    return tl;
+}
+
+function scream(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#scream", 
+    scrub: true,
+   // markers: true, 
+    end:"bottom 25%",
+    start:"bottom 50%"
+    }})
+
+    .from("#scream",{duration:2, y:-50, alpha:0},"same")
+
+
+    return tl;
+}
+
+function footer(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#footer", 
+    scrub: true,
+  //  markers: true, 
+    end:"top 5%",
+    start:"top 100%"
+    }})
+
+    .from("#footertext",{duration:1, y:-100, alpha:0},"same")
+
+
+    return tl;
+}
 
 var buttonAnimation2 = gsap.timeline({paused:true}); 
 buttonAnimation2.to("#tickets-btn",{duration:1, scale:heroSizeNumber}, "goAway")
@@ -92,4 +145,8 @@ ticketsBtn.addEventListener("mouseout",function(){
 
 var mainTl = gsap.timeline();
 mainTl.add(heroAnimation())
-.add(crossbones()); 
+.add(crossbones())
+.add(ghoulstext()) 
+.add(skeleton())
+.add(scream()) 
+.add(footer()); 
