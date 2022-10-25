@@ -35,6 +35,10 @@ mm.add("(max-width: 768px)", () => {
 
 let booBtn = document.querySelector("#boo-btn");
 let ticketsBtn = document.querySelector("#tickets-btn");
+let houseBtn = document.querySelector("#house-btn");
+let costumeBtn = document.querySelector("#costume-btn");
+let pastBtn = document.querySelector("#past-btn");
+
 
 var buttonAnimation = gsap.timeline({paused:true}); 
 buttonAnimation.to("#boo-btn",{duration:1, scale:heroSizeNumber}, "goAway")
@@ -83,7 +87,11 @@ function gallery(){
     start:"top 70%"
     }})
 
-    .from("#gallery1",{attr:{points:"0,200 400,200 400,200 0,200 0,0"} },1)
+    .from("#gallery1",{duration:0.5, clipPath:"inset(100% 0% 0% 0% )"})
+    .from("#gallery2",{duration:0.5, clipPath:"inset(100% 0% 0% 0% )"})
+    .from("#gallery3",{duration:0.5, clipPath:"inset(100% 0% 0% 0% )"})
+
+    .from("#gallery button",{duration:0.5, clipPath:"inset(0% 0% 100% 0% )"})
 
 
     return tl;
@@ -150,14 +158,48 @@ function footer(){
 }
 
 var buttonAnimation2 = gsap.timeline({paused:true}); 
-buttonAnimation2.to("#tickets-btn",{duration:1, scale:heroSizeNumber}, "goAway")
+buttonAnimation2.to("#house-btn" ,{duration:1, scale:heroSizeNumber}, "goAway")
 
-ticketsBtn.addEventListener("mouseover",function(){
+houseBtn.addEventListener("mouseover",function(){
 buttonAnimation2.play(); 
 })
 
-ticketsBtn.addEventListener("mouseout",function(){
+houseBtn.addEventListener("mouseout",function(){
         buttonAnimation2.reverse(); 
+    })
+
+    var buttonAnimation3 = gsap.timeline({paused:true}); 
+    buttonAnimation3.to("#costume-btn" ,{duration:1, scale:heroSizeNumber}, "goAway")
+    
+    costumeBtn.addEventListener("mouseover",function(){
+    buttonAnimation3.play(); 
+    })
+    
+    costumeBtn.addEventListener("mouseout",function(){
+            buttonAnimation3.reverse(); 
+        })
+
+var buttonAnimation4 = gsap.timeline({paused:true}); 
+buttonAnimation4.to("#past-btn" ,{duration:1, scale:heroSizeNumber}, "goAway")
+        
+pastBtn.addEventListener("mouseover",function(){
+buttonAnimation4.play(); 
+        })
+        
+pastBtn.addEventListener("mouseout",function(){
+buttonAnimation4.reverse(); 
+            })        
+
+    
+var buttonAnimation5 = gsap.timeline({paused:true}); 
+buttonAnimation5.to("#tickets-btn",{duration:1, scale:heroSizeNumber}, "goAway")
+
+ticketsBtn.addEventListener("mouseover",function(){
+buttonAnimation5.play(); 
+})
+
+ticketsBtn.addEventListener("mouseout",function(){
+        buttonAnimation5.reverse(); 
     })
 
 
