@@ -70,9 +70,25 @@ function crossbones(){
     .to("#crossbones",{duration:2, scale:7, alpha:0},"same")
     .from("#content2",{alpha:0, y:-100, duration: 2},"same")
     .from("content2 h1", {alpha: 0, x:-100, duration: 1}, "same")
+    .from("#bodyCopy i", {alpha: 0, rotation: 360, duration: 3}, "same")
 
     return tl;
 }
+
+function gallery(){
+    var tl = gsap.timeline({scrollTrigger:{trigger:"#gallery", 
+    scrub: true,
+    //markers: true, 
+    end:"top 20%",
+    start:"top 70%"
+    }})
+
+    .from("#gallery1",{attr:{points:"0,200 400,200 400,200 0,200 0,0"} },1)
+
+
+    return tl;
+}
+
 
 function ghoulstext(){
     var tl = gsap.timeline({scrollTrigger:{trigger:"#ghoulstext", 
@@ -127,6 +143,7 @@ function footer(){
     }})
 
     .from("#footertext",{duration:1, y:-100, alpha:0},"same")
+    .from("#footertext2", {duration: 1, y:50, alpha: 0}, "same")
 
 
     return tl;
@@ -149,7 +166,10 @@ ticketsBtn.addEventListener("mouseout",function(){
 var mainTl = gsap.timeline();
 mainTl.add(heroAnimation())
 .add(crossbones())
+.add(gallery())
 .add(ghoulstext()) 
 .add(skeleton())
 .add(scream()) 
 .add(footer()); 
+
+

@@ -7,8 +7,14 @@
     background-color: var(--black);
     overflow: hidden; 
 
+    #bodyCopy {
+        display: flex; 
+        flex-direction: row; 
+    }
+
     i{ 
         color: var(--orange);
+        padding: 20px; 
     }
 
     h1{

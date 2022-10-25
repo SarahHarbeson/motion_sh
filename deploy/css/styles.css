@@ -465,8 +465,13 @@ textarea {
   background-color: var(--black);
   overflow: hidden;
 }
+#section2 #bodyCopy {
+  display: flex;
+  flex-direction: row;
+}
 #section2 i {
   color: var(--orange);
+  padding: 20px;
 }
 #section2 h1 {
   text-align: center;
@@ -478,6 +483,56 @@ textarea {
   text-align: left;
   width: 450px;
   padding: 20px;
+}
+
+#gallery {
+  height: 30vh;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+#hall {
+  max-height: 300px;
+  clip-path: inset(10px 30px 50px 50px);
+}
+
+#ghostHome {
+  max-height: 300px;
+  clip-path: inset(10px 50px 50px 60px);
+}
+
+#door {
+  max-height: 300px;
+  clip-path: inset(10px 20px 50px 30px);
+}
+
+p {
+  color: var(--white);
+}
+
+#gallery1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #ghoul {
@@ -534,9 +589,13 @@ textarea {
   align-items: center;
   text-align: center;
 }
-#footer p {
+#footer #footertext {
   color: var(--white);
   font-size: 60px;
-  padding: 100px;
-  margin-top: 50px;
+  margin-top: 150px;
+}
+#footer #footertext2 {
+  font-size: 15px;
+  color: var(--white);
+  margin-top: -90px;
 }
