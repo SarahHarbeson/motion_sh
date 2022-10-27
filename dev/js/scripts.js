@@ -10,6 +10,8 @@ gsap.registerPlugin(DrawSVGPlugin, GSDevTools);
 
 function simpleMotion(){
     var tl = gsap.timeline()
+    
+
 
     return tl; 
 }
