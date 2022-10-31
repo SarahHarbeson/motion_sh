@@ -18,8 +18,8 @@ function simpleMotion(){
 
 function patternMotion(){
     var tl = gsap.timeline()
-    tl.from(".odd", {duration:0.5, rotate:180, drawSVG:0, stagger:0.25, transformOrigin: "center"}, "playPattern")
-    .fromTo(".even",{drawSVG:"0% 0%"}, {duration:0.5, rotate:180, drawSVG:"0% -100%", stagger:0.25, transformOrigin: "center"}, "playPattern")
+    tl.from(".odd", {duration:1, drawSVG:0, stagger:1, transformOrigin: "center"}, "playPattern")
+    .fromTo(".even",{drawSVG:"0% 0%"}, {duration:2, drawSVG:"0% -100%", stagger:1, transformOrigin: "center"}, "playPattern")
     return tl; 
 }
 
