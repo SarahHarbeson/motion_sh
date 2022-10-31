@@ -10,8 +10,23 @@ gsap.registerPlugin(DrawSVGPlugin, GSDevTools);
 
 function simpleMotion(){
     var tl = gsap.timeline()
-    
+    var line = document.querySelector("#line");
 
+    var Ball1 = document.querySelector("#ball1");
+
+    gsap.set("#ball1",{x:line.width / 2 + Ball1.width / 2, transformOrigin:"center" })
+   // gsap.set("#ball2",{x:-line.width/2 - leftBall.width / 2, transformOrigin:"center" })
+
+
+     .from("#ball1",{scale:0, duration:0.25, drawSVG: 0})
+    //  .from("#left-ball",{scale:0, duration:0.25},"-=50%")
+    //  .to("#right-ball",{x:0, duration:0.25},"rollOut")
+    //  .to("#left-ball",{x:0, duration:0.25},"rollOut")
+      .fromTo("#line",{drawSVG:"50% 50%"},{duration:0.25, drawSVG: "0% 100%"},"rollOut")
+    //  .from("#center",{duration: 0.25, scale:0, transformOrigin:"center"},"-=50%")
+    //  .to("#center",{duration: 0.25, y: -center.height / 2 - 50},"-=50%")
+    //  .to("#center",{duration: 0.15, y: 0})
+    //  .fromTo("#center-outline",{drawSVG:"100% 50%"},{duration:0.15,drawSVG:"125% 25%"},"-=50%")
 
     return tl; 
 }
@@ -20,6 +35,8 @@ function patternMotion(){
     var tl = gsap.timeline()
     tl.from(".odd", {duration:1, drawSVG:0, stagger:1, transformOrigin: "center"}, "playPattern")
     .fromTo(".even",{drawSVG:"0% 0%"}, {duration:2, drawSVG:"0% -100%", stagger:1, transformOrigin: "center"}, "playPattern")
+    .to(".odd", {duration: 1, stagger: 0.5, rotate: 360})
+    .from("even", {duration: 1, stagger: 0.75, rotate: -360})
     return tl; 
 }
 
@@ -42,5 +59,5 @@ mainTl.add(simpleMotion())
     .add(UIMotion()); 
 
 
-GSDevTools.create();
+    GSDevTools.create();
 
