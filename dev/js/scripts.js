@@ -9,20 +9,21 @@ gsap.registerPlugin(DrawSVGPlugin, GSDevTools);
 
 
 function simpleMotion(){
-    var tl = gsap.timeline()
-    var line = document.querySelector("#line");
+     var tl = gsap.timeline()
+     var line = document.querySelector("#lines");
 
-    var Ball1 = document.querySelector("#ball1");
+     var Ball1 = document.querySelector("#ball1");
+     var Ball5 = document.querySelector("#ball5");
 
-    gsap.set("#ball1",{x:line.width / 2 + Ball1.width / 2, transformOrigin:"center" })
-   // gsap.set("#ball2",{x:-line.width/2 - leftBall.width / 2, transformOrigin:"center" })
+ //    gsap.set("#ball1",{x:line.width / 2 + Ball1.width / 2, transformOrigin:"center" })
+   //  gsap.set("#ball5",{x:-line.width/2 - Ball5.width / 2, transformOrigin:"center" })
 
 
-     .from("#ball1",{scale:0, duration:0.25, drawSVG: 0})
-    //  .from("#left-ball",{scale:0, duration:0.25},"-=50%")
-    //  .to("#right-ball",{x:0, duration:0.25},"rollOut")
-    //  .to("#left-ball",{x:0, duration:0.25},"rollOut")
-      .fromTo("#line",{drawSVG:"50% 50%"},{duration:0.25, drawSVG: "0% 100%"},"rollOut")
+      tl.from("#ball1",{scale:0, duration:0.25, drawSVG: 0})
+//     //  .from("#left-ball",{scale:0, duration:0.25},"-=50%")
+       .to("#ball1",{x:0, duration:0.25},"rollOut")
+      .to("#ball2",{x:0, duration:0.25},"rollOut")
+       .fromTo("#lines",{drawSVG:"10% 90%"},{duration:0.25, drawSVG: "0% 100%"},"rollOut")
     //  .from("#center",{duration: 0.25, scale:0, transformOrigin:"center"},"-=50%")
     //  .to("#center",{duration: 0.25, y: -center.height / 2 - 50},"-=50%")
     //  .to("#center",{duration: 0.15, y: 0})
