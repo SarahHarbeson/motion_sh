@@ -42,10 +42,10 @@ function simpleMotion(){
 
 function patternMotion(){
     var tl = gsap.timeline()
-    tl.from(".odd", {duration:1, drawSVG:0, stagger:1, transformOrigin: "center"}, "playPattern")
-    .fromTo(".even",{drawSVG:"0% 0%"}, {duration:2, drawSVG:"0% -100%", stagger:1, transformOrigin: "center"}, "playPattern")
-    .to(".odd", {duration: 1, stagger: 0.5, rotate: 360})
-    .from("even", {duration: 1, stagger: 0.75, rotate: -360})
+    tl.fromTo(".odd", {drawSVG:"0% 0%"}, {duration:2, drawSVG:"100% 0%", stagger:1}, "playPattern")
+    .fromTo(".even",{drawSVG:"0% 0%"}, {duration:2, drawSVG:"0% -100%", stagger:1}, "playPattern")
+    .to(".odd", {duration: 1, stagger: 0.75, rotate: 360, transformOrigin: "center"}, 2)
+    .from(".even", {duration: 1, stagger: 0.75, rotate: -360, transformOrigin: "center"}, 2)
     return tl; 
 }
 
@@ -55,8 +55,27 @@ function UIMotion(){
    // bottomLine = bottomLine.getBBox(); 
 
     var tl = gsap.timeline()
-    tl.from("#box", {duration:1, scale:1.4, strokeWidth: 4})
-   // .from("#bottom-line", {duration:0.5, drawSVG:0}, "drawIn")
+    tl.fromTo(".box",{drawSVG:"0% 0%"}, {duration:2, drawSVG:"0% -100%", stagger:1, transformOrigin: "center"}, "playPattern")
+     .fromTo(".L, .O, .A, .D, .I, .N, .G",{drawSVG:"50% 50%" }, {duration: 2, drawSVG:"100% 0%"}, "playPattern")
+     .fromTo(".L, .O, .A, .D, .I, .N, .G", 1, {fill:"none"}, {fill:"black"})
+
+      .to(".box", {duration:1, scaleX:1.05, transformOrigin: "center"}, 2)
+      .to(".L, .O, .A, .D, .I, .N, .G", {duration:0.5, scaleX:1.2, transformOrigin: "center"}, 2)
+      .to(".box", {duration:0.5, scaleX:1, transformOrigin: "center"}, 3)
+      .to(".L, .O, .A, .D, .I, .N, .G", {duration:0.5, scaleX:1, transformOrigin: "center"}, 3)
+      .to(".box", {duration:0.5, scaleY:1.2, transformOrigin: "center"}, 4)
+      .to(".L, .O, .A, .D, .I, .N, .G", {duration:0.5, scaleY:1.2, transformOrigin: "center"}, 4)
+      .to(".box", {duration:0.5, scaleY:1, transformOrigin: "center"}, 5)
+      .to(".L, .O, .A, .D, .I, .N, .G", {duration:0.5, scaleY:1, transformOrigin: "center"}, 5)
+      .to(".box", {duration:1, scale:1.2, transformOrigin: "center"}, 6)
+      .to(".L, .O, .A, .D, .I, .N, .G", {duration:1, scale:1.3, transformOrigin: "center"}, 6)
+      .to(".box", {duration:0.5, scale:1, transformOrigin: "center"}, 7)
+      .to(".L, .O, .A, .D, .I, .N, .G", {duration:0.5, scale:1, transformOrigin: "center"}, 7)
+
+    .fromTo(".box",{drawSVG:"0% -100%"}, {duration:2, drawSVG:"0% 0%", stagger:1, transformOrigin: "center"}, 8, "playPattern")
+     .fromTo(".L, .O, .A, .D, .I, .N, .G",{drawSVG:"100% 0%" }, {duration: 2, drawSVG:"50% 50%"}, 8, "playPattern")
+     .fromTo(".L, .O, .A, .D, .I, .N, .G", {fill:"black"}, {fill:"none"}, 8)
+
     
 
     return tl; 
