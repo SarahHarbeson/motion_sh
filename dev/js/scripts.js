@@ -11,10 +11,14 @@ gsap.registerPlugin(DrawSVGPlugin, GSDevTools);
 function simpleMotion(){
      var tl = gsap.timeline()
 
-     var bottomLine = document.querySelector("#line"); 
-     bottomLine = bottomLine.getBBox(); 
+   //  var bottomLine = document.querySelector("#line"); 
+     var center = document.querySelector("#center");
+     center = center.getBBox();
+   // bottomLine = bottomLine.getBBox(); 
 
-     tl.from(".line", {duration:0.5, drawSVG:0}, "drawIn");
+     //tl.from("#center",{duration: 0.25, scale:0, transformOrigin:"center"},"-=50%")
+        tl.from(".line1", {duration:0.5, drawSVG:0, stagger: 0.5, transformOrigin: "center"}, "drawIn")
+        .from(".dot1, .dot2", {scale: 0, duration: .5, drawSVG: 0, stagger: .5}, "drawIn");
 
 
 
