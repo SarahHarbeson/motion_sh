@@ -51,12 +51,12 @@ function patternMotion(){
 
 function UIMotion(){
 
-    var bottomLine = document.querySelector("#bottom-line"); 
-    bottomLine = bottomLine.getBBox(); 
+ //  var bottomLine = document.querySelector("#bottom-line"); 
+   // bottomLine = bottomLine.getBBox(); 
 
     var tl = gsap.timeline()
-    tl.to("#pencil", {duration:0.5, x:bottomLine.width}, "drawIn")
-    .from("#bottom-line", {duration:0.5, drawSVG:0}, "drawIn")
+    tl.from("#box", {duration:1, scale:1.4, strokeWidth: 4})
+   // .from("#bottom-line", {duration:0.5, drawSVG:0}, "drawIn")
     
 
     return tl; 
