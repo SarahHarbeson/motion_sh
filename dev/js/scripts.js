@@ -16,8 +16,8 @@ gsap.set("#d2",{scaleY:0.6});
 function dAnimation(){
                 var tl = gsap.timeline();
 
-                tl.from("#d1, #d2", {duration:1, y:"+=100", ease: "elastic.out(0.5)"})
-                 .to("#d2", {duration:1, scaleY:1, ease: "none"})
+                tl.from("#d1, #d2", {duration:1, y:"+=50", ease: "elastic.out(0.7)", alpha: 0}, 1)
+                 .to("#d2", {duration:1, scaleY:1, ease: "none"}, 0.75)
 
                 return tl;
 }
@@ -25,8 +25,8 @@ function dAnimation(){
 function hAnimation(){
         var tl = gsap.timeline();
 
-        tl.from("#h1, #h2, #h3", {duration:1.2, y:"+=100", ease: "elastic.out(0.5)"})
-         .fromTo("#h3", {drawSVG:"0% 0%"}, {duration:1.2, drawSVG:"0% 100%"})
+        tl.from("#h1, #h2, #h3", {duration:1, y:"+=50", ease: "elastic.out(0.7)", alpha: 0}, 1)
+         .fromTo("#h3", {drawSVG:"0% 0%"}, {duration:1, drawSVG:"0% 100%"}, 0.75)
 
         return tl;
 }
@@ -34,81 +34,52 @@ function hAnimation(){
 function firstaAnimation(){
         var tl = gsap.timeline();
 
-        tl.from("#a1, #a2, #a3", {duration:1.3, y:"+=100", ease: "elastic.out(0.5)"})
-         .fromTo("#a3", {drawSVG:"0% 0%"}, {duration:1.3, drawSVG:"0% 100%"})
+
+         tl.from("#a1, #a2, #a3", {duration:1, y:"+=50", ease: "elastic.out(0.7)", alpha: 0}, 1)
+           .fromTo("#a3", {drawSVG:"0% 0%"}, {duration:1, drawSVG:"0% -100%"}, 0.75)
 
         return tl;
 }
 
-// function tAnimation(){
-//         var tl = gsap.timeline();
-//         tl.from("#t-down",{duration:0.5, y:"-=500", ease:"none"})
+function rAnimation(){
+        var tl = gsap.timeline();
 
-//         // stretch out bottom of T
-//         .to("#t-down",{duration:0.5, scaleY:1.5, ease: "none)"})
 
-//         // animate the bottom of the T path
-//         .from("#t-path",{duration:0.25, scaleY:0, ease: "none)"},"-=20%")
-//         .fromTo("#t-path",{duration:0.25, drawSVG: "0% 10%"}, {drawSVG:"90% 100%", ease:"none"}, "tAnimation")
+         tl.from("#r1, #r2", {duration:1, y:"+=50", ease: "elastic.out(0.7)", alpha: 0}, 1)
+           .fromTo("#r2", {drawSVG:"0% 0%"}, {duration:1, drawSVG:"0% 100%"}, 0.75)
 
-//         // animate the t cross bar
-//         .from("#t-cross",{duration:0.5, scaleX:0, ease: "elastic.out(1, 0.3)"}, "tAnimation")
+        return tl;
+}
 
-//         // snap T back into shape
-//         .to("#t-down",{duration:0.5, scaleY:1, ease: "elastic.out(1, 0.3)"},"-=80%")
-//         return tl;
-// }
+function mAnimation(){
+        var tl = gsap.timeline();
 
-// function eAnimation(){
-//         var tl = gsap.timeline();
-//         //rotate E 
-//         tl.from("#e", {duration:0.75, rotate: 120, ease: "elastic.out(1, 0.5)"})
-//         return tl;
-// }
 
-// function kAnimation(){
-//         var tl = gsap.timeline();
-//         // drop in K
-//         tl.from("#k", {duration:0.25, y:"-=200", ease: "bounce",autoAlpha:0})
-//         return tl;
-// }
+         tl.from("#m1, #m2, #m3, #m4", {duration:1, y:"+=50", ease: "elastic.out(0.7)", alpha: 0}, 1)
+           .fromTo("#m3, #m4", {drawSVG:"0% 0%"}, {duration:1, drawSVG:"0% 100%"}, 0.75)
 
-// function nAnimation(){
-//         var tl = gsap.timeline();
-//         //skew the N in
-//         tl.from("#n", {duration:0.25, scaleX:0})
-//         return tl;
-// }
+        return tl;
+}
 
-// function iAnimation(){
-//         var tl = gsap.timeline();
-//         // make I pop out
-//         tl.from("#i",{duration:0.5, scaleY:0, ease: "elastic.out(1, 0.5)"})
-//         return tl;
-// }
+function secondaAnimation(){
+        var tl = gsap.timeline();
 
-// function tPathAnimation(){
-//         var tl = gsap.timeline();
-//          // make T path disappear
-//         tl.to("#t-path",{duration:0.25, scaleY:0})
-//         return tl;
-// }
 
-// function dotAnimation(){
-//         var tl = gsap.timeline();
-//         // dot pops out and lands
-//         tl.from("#dot",{duration:0.01, autoAlpha:0})
-//         .from("#dot",{duration:1, motionPath:{path:"#dot-path", align:"#dot-path"},ease: "bounce.out"},"-=0.65");
-//         return tl;
-// }
+         tl.from("#a4, #a5, #a6", {duration:1, y:"+=50", ease: "elastic.out(0.7)", alpha: 0}, 1)
+           .fromTo("#a6", {drawSVG:"0% 0%"}, {duration:1, drawSVG:"0% -100%"}, 0.75)
+
+        return tl;
+}
+
+
 
 var mainTL = gsap.timeline();
-mainTL.add(dAnimation()), -1
- .add(hAnimation(), -1)
-.add(firstaAnimation(), -1)
-// .add(nAnimation(),"-=0.35")
-// .add(iAnimation(),"-=0.6")
-// .add(tPathAnimation(),"-=0.6")
+mainTL.add(dAnimation(), 0.5)
+ .add(hAnimation(), 0.55)
+ .add(firstaAnimation(), 0.6)
+ .add(rAnimation(), 0.65)
+ .add(mAnimation(), 0.7)
+ .add(secondaAnimation(), 0.75)
 // .add(dotAnimation(),"-=0.55")
 
 
