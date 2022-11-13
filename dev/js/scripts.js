@@ -16,8 +16,8 @@ gsap.set("#d2",{scaleY:0.6});
 function dAnimation(){
                 var tl = gsap.timeline();
 
-                tl.from("#d1, #d2", {duration:1, y:"+=100", ease: "elastic.out(0.5)"}, 1)
-                 .to("#d2", {duration:1, scaleY:1, ease: "none"}, 1)
+                tl.from("#d1, #d2", {duration:1, y:"+=100", ease: "elastic.out(0.5)"})
+                 .to("#d2", {duration:1, scaleY:1, ease: "none"})
 
                 return tl;
 }
@@ -25,12 +25,20 @@ function dAnimation(){
 function hAnimation(){
         var tl = gsap.timeline();
 
-        tl.from("#h1, #h2, #h3", {duration:1.2, y:"+=100", ease: "elastic.out(0.5)"}, 1)
-         .fromTo("#h3", {drawSVG:"0% 0%"}, {duration:1.2, drawSVG:"0% 100%"}, 1)
+        tl.from("#h1, #h2, #h3", {duration:1.2, y:"+=100", ease: "elastic.out(0.5)"})
+         .fromTo("#h3", {drawSVG:"0% 0%"}, {duration:1.2, drawSVG:"0% 100%"})
 
         return tl;
 }
 
+function firstaAnimation(){
+        var tl = gsap.timeline();
+
+        tl.from("#a1, #a2, #a3", {duration:1.3, y:"+=100", ease: "elastic.out(0.5)"})
+         .fromTo("#a3", {drawSVG:"0% 0%"}, {duration:1.3, drawSVG:"0% 100%"})
+
+        return tl;
+}
 
 // function tAnimation(){
 //         var tl = gsap.timeline();
@@ -97,7 +105,7 @@ function hAnimation(){
 var mainTL = gsap.timeline();
 mainTL.add(dAnimation()), -1
  .add(hAnimation(), -1)
-// .add(kAnimation(),"-=0.6")
+.add(firstaAnimation(), -1)
 // .add(nAnimation(),"-=0.35")
 // .add(iAnimation(),"-=0.6")
 // .add(tPathAnimation(),"-=0.6")
