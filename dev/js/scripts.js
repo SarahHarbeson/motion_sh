@@ -22,19 +22,19 @@ return tl;
 
 }
 
-function morphAnimation2(){
-        var tl = gsap.timeline(); 
+// function morphAnimation2(){
+//         var tl = gsap.timeline(); 
         
-        gsap.to("#bottle1", {duration: 1, morphSVG:"#bone1"});
-        gsap.to("#bottle2", {duration: 1, morphSVG:"#bone2"});
-        gsap.to("#bottle3", {duration: 1, morphSVG:"#bone3"});
-        gsap.to("#bottle4", {duration: 1, morphSVG:"#bone4"});
-        gsap.to("#bottle5", {duration: 1, morphSVG:"#bone5"});
-        gsap.to("#bottle6", {duration: 1, morphSVG:"#bone6"});
+//         gsap.to("#bottle1", {duration: 1, morphSVG:"#bone1"});
+//         gsap.to("#bottle2", {duration: 1, morphSVG:"#bone2"});
+//         gsap.to("#bottle3", {duration: 1, morphSVG:"#bone3"});
+//         gsap.to("#bottle4", {duration: 1, morphSVG:"#bone4"});
+//         gsap.to("#bottle5", {duration: 1, morphSVG:"#bone5"});
+//         gsap.to("#bottle6", {duration: 1, morphSVG:"#bone6"});
         
-        return tl;
+//         return tl;
         
-        }
+//         }
 
 // gsap.set("#t-down",{scaleY:0.5});
 // gsap.set("#t-cross",{transformOrigin: "center"});
@@ -106,7 +106,7 @@ function morphAnimation2(){
 
  var mainTL = gsap.timeline();
  mainTL.add(morphAnimation1(), -1)
- .add(morphAnimation2(), 2)
+ //.add(morphAnimation2(), 2)
 // .add(eAnimation(),"-=0.25")
 // .add(kAnimation(),"-=0.6")
 // .add(nAnimation(),"-=0.35")
