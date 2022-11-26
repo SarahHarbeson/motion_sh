@@ -6,17 +6,26 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin, MorphSVGPlugin);
 
-
+MorphSVGPlugin.convertToPath("circle");
 
 function morphAnimation1(){
 var tl = gsap.timeline(); 
 
-gsap.to("#skull1", {duration: 1, morphSVG:"#bottle1"});
-gsap.to("#skull2", {duration: 1, morphSVG:"#bottle2"});
-gsap.to("#skull3", {duration: 1, morphSVG:"#bottle3"});
-gsap.to("#skull4", {duration: 1, morphSVG:"#bottle4"});
-gsap.to("#skull5", {duration: 1, morphSVG:"#bottle5"});
-gsap.to("#skull6", {duration: 1, morphSVG:"#bottle6"});
+gsap.to("#skull1", {duration: 1, morphSVG:"#bottle1"}, 1);
+gsap.to("#skull2", {duration: 1, morphSVG:"#bottle2"}, 1);
+gsap.to("#skull3", {duration: 1, morphSVG:"#bottle3"}, 1);
+gsap.to("#skull4", {duration: 1, morphSVG:"#bottle4"}, 1);
+gsap.to("#skull5", {duration: 1, morphSVG:"#bottle5"}, 1);
+gsap.to("#skull6", {duration: 1, morphSVG:"#bottle6"}, 1);
+
+gsap.to("#skull1", {duration: 1, morphSVG:"#bone1"}, 2);
+gsap.to("#skull2", {duration: 1, morphSVG:"#bone2"}, 2);
+gsap.to("#skull3", {duration: 1, morphSVG:"#bone3"}, 2);
+gsap.to("#skull4", {duration: 1, morphSVG:"#bone4"}, 2);
+gsap.to("#skull5", {duration: 1, morphSVG:"#bone5"}, 2);
+gsap.to("#skull6", {duration: 1, morphSVG:"#bone6"}, 2);
+
+    
 
 return tl;
 
@@ -106,7 +115,7 @@ return tl;
 
  var mainTL = gsap.timeline();
  mainTL.add(morphAnimation1(), -1)
- //.add(morphAnimation2(), 2)
+//  .add(morphAnimation2(), 1)
 // .add(eAnimation(),"-=0.25")
 // .add(kAnimation(),"-=0.6")
 // .add(nAnimation(),"-=0.35")
