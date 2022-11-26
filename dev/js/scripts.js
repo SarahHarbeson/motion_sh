@@ -6,6 +6,14 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin, MorphSVGPlugin);
 
+function skullAnimation(){
+    var tl=gsap.timeline(); 
+
+    gsap.from("#skull1, #skull2, #skull3, #skull4, #skull5, #skull6", {duration: 1, y: 20, alpha: 0});
+
+    return tl; 
+}
+
 MorphSVGPlugin.convertToPath("circle");
 
 function morphAnimation1(){
@@ -114,7 +122,8 @@ return tl;
 // }
 
  var mainTL = gsap.timeline();
- mainTL.add(morphAnimation1(), -1)
+ mainTL.add(skullAnimation(), -1)
+ .add(morphAnimation1(), 2)
 //  .add(morphAnimation2(), 1)
 // .add(eAnimation(),"-=0.25")
 // .add(kAnimation(),"-=0.6")
