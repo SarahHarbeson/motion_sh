@@ -46,6 +46,19 @@ return tl;
 
 }
 
+function cutPath(){
+    //gsap.set("#scalpel",{scale:0.25});
+    var tl = gsap.timeline();
+    tl.to("#scalpel1, #scalpel2, #scalpel3, #scalpel4, #scalpel5, #scalpel6",{duration:3, scale:2, 
+        motionPath:{
+            path:"#scalpel-path", 
+            align:"#scalpel-path",
+            autoRotate:true
+        }, 
+            transformOrigin:"center", rotate:45, ease: "expo.in"});
+    return tl;
+}
+
 // function morphAnimation2(){
 //         var tl = gsap.timeline(); 
         
@@ -131,6 +144,7 @@ return tl;
  var mainTL = gsap.timeline();
  mainTL.add(skullAnimation(), -1)
  .add(morphAnimation1(), 2)
+ .add(cutPath(), 3)
 //  .add(morphAnimation2(), 1)
 // .add(eAnimation(),"-=0.25")
 // .add(kAnimation(),"-=0.6")
