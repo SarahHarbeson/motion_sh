@@ -33,6 +33,13 @@ gsap.to("#skull4", {duration: 1, morphSVG:"#bone4"}, 2);
 gsap.to("#skull5", {duration: 1, morphSVG:"#bone5"}, 2);
 gsap.to("#skull6", {duration: 1, morphSVG:"#bone6"}, 2);
 
+gsap.to("#skull1", {duration: 1, morphSVG:"#scalpel1"}, 3);
+gsap.to("#skull2", {duration: 1, morphSVG:"#scalpel2"}, 3);
+gsap.to("#skull3", {duration: 1, morphSVG:"#scalpel3"}, 3);
+gsap.to("#skull4", {duration: 1, morphSVG:"#scalpel4"}, 3);
+gsap.to("#skull5", {duration: 1, morphSVG:"#scalpel5"}, 3);
+gsap.to("#skull6", {duration: 1, morphSVG:"#scalpel6"}, 3);
+
     
 
 return tl;
