@@ -6,10 +6,22 @@ import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin, MorphSVGPlugin);
 
+function setup (){
+    var tl=gsap.timeline(); 
+
+    gsap.set("#m8",{rotate: 1,  x: 14.5, y: 20, immediateRender: true});
+    gsap.set("#m7",{rotate: 2,  x: 16.5, y: 24, immediateRender: true});
+    gsap.set("#m4",{rotate: 1,  x: 12.5, y: 10, immediateRender: true});
+    gsap.set("#m3",{rotate: 1.5,  x: 16, y: 16, immediateRender: true});
+
+    return tl; 
+}
+
 function skullAnimation(){
     var tl=gsap.timeline(); 
 
-    gsap.from("#skull1, #skull2, #skull3, #skull4, #skull5, #skull6", {duration: 1, y: 20, alpha: 0});
+
+    gsap.from("#skull1, #skull2, #skull3, #skull4, #skull5, #skull6", {duration: 1, y: 20, alpha: 0}, 1);
 
     return tl; 
 }
@@ -18,6 +30,7 @@ MorphSVGPlugin.convertToPath("circle");
 
 function morphAnimation1(){
 var tl = gsap.timeline(); 
+
 
 gsap.to("#skull1", {duration: 1, morphSVG:"#bottle1"}, 1);
 gsap.to("#skull2", {duration: 1, morphSVG:"#bottle2"}, 1);
@@ -49,7 +62,7 @@ return tl;
 function cutPath(){
     //gsap.set("#scalpel",{scale:0.25});
     var tl = gsap.timeline();
-    tl.to("#scalpel1, #scalpel2, #scalpel3, #scalpel4, #scalpel5, #scalpel6",{duration:3, scale:2, 
+    tl.to("#scalpel1, #scalpel2, #scalpel3, #scalpel4, #scalpel5, #scalpel6",{duration:3, 
         motionPath:{
             path:"#scalpel-path", 
             align:"#scalpel-path",
@@ -142,9 +155,10 @@ function cutPath(){
 // }
 
  var mainTL = gsap.timeline();
- mainTL.add(skullAnimation(), -1)
- .add(morphAnimation1(), 2)
- .add(cutPath(), 3)
+ mainTL.add(setup())
+ .add(skullAnimation(), 2)
+ .add(morphAnimation1(), 3)
+ .add(cutPath(), 4)
 //  .add(morphAnimation2(), 1)
 // .add(eAnimation(),"-=0.25")
 // .add(kAnimation(),"-=0.6")
