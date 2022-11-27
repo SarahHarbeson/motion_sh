@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 
 gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin, MorphSVGPlugin);
@@ -9,10 +10,12 @@ gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin, MorphSVGPlugin)
 function setup (){
     var tl=gsap.timeline(); 
 
-    gsap.set("#m8",{rotate: 1,  x: 14.5, y: 20, immediateRender: true});
-    gsap.set("#m7",{rotate: 2,  x: 16.5, y: 24, immediateRender: true});
-    gsap.set("#m4",{rotate: 1,  x: 12.5, y: 10, immediateRender: true});
-    gsap.set("#m3",{rotate: 1.5,  x: 16, y: 16, immediateRender: true});
+    gsap.set("#m8",{rotate: 1,  x: 14.5, y: 20, immediateRender: true}, -1);
+    gsap.set("#m7",{rotate: 2,  x: 16.5, y: 24, immediateRender: true}, -1);
+    gsap.set("#m4",{rotate: 1,  x: 12.5, y: 10, immediateRender: true}, -1);
+    gsap.set("#m3",{rotate: 1.5,  x: 16, y: 16, immediateRender: true}, -1);
+    
+    gsap.set("#mutterMuseum",{ x: -13, immediateRender: true}, -1);
 
     return tl; 
 }
@@ -21,7 +24,7 @@ function skullAnimation(){
     var tl=gsap.timeline(); 
 
 
-    gsap.from("#skull1, #skull2, #skull3, #skull4, #skull5, #skull6", {duration: 1, y: 20, alpha: 0}, 1);
+    gsap.from("#skull1, #skull2, #skull3, #skull4, #skull5, #skull6", {duration: 1, y: 50, alpha: 0}, 0);
 
     return tl; 
 }
@@ -59,113 +62,57 @@ return tl;
 
 }
 
-function cutPath(){
-    //gsap.set("#scalpel",{scale:0.25});
+function mPath(){
     var tl = gsap.timeline();
-    tl.to("#scalpel1, #scalpel2, #scalpel3, #scalpel4, #scalpel5, #scalpel6",{duration:3, 
-        motionPath:{
-            path:"#scalpel-path", 
-            align:"#scalpel-path",
-            autoRotate:true
-        }, 
-            transformOrigin:"center", rotate:45, ease: "expo.in"});
+
+    gsap.from("#ms", {duration: 1, y: 50, alpha: 0}, 4);
+
     return tl;
 }
 
-// function morphAnimation2(){
-//         var tl = gsap.timeline(); 
-        
-//         gsap.to("#bottle1", {duration: 1, morphSVG:"#bone1"});
-//         gsap.to("#bottle2", {duration: 1, morphSVG:"#bone2"});
-//         gsap.to("#bottle3", {duration: 1, morphSVG:"#bone3"});
-//         gsap.to("#bottle4", {duration: 1, morphSVG:"#bone4"});
-//         gsap.to("#bottle5", {duration: 1, morphSVG:"#bone5"});
-//         gsap.to("#bottle6", {duration: 1, morphSVG:"#bone6"});
-        
-//         return tl;
-        
-//         }
 
-// gsap.set("#t-down",{scaleY:0.5});
-// gsap.set("#t-cross",{transformOrigin: "center"});
-// gsap.set("#i",{transformOrigin: "center bottom"});
-// gsap.set("#e",{transformOrigin: "left bottom"});
-// gsap.set("#dot",{transformOrigin: "50% 50%", xPercent:-50, yPercent:-50});
+function cutPath(){
 
-// function tAnimation(){
-//         var tl = gsap.timeline();
-//         tl.from("#t-down",{duration:0.5, y:"-=500", ease:"none"})
+    var tl = gsap.timeline();
 
-//         // stretch out bottom of T
-//         .to("#t-down",{duration:0.5, scaleY:1.5, ease: "none)"})
 
-//         // animate the bottom of the T path
-//         .from("#t-path",{duration:0.25, scaleY:0, ease: "none)"},"-=20%")
-//         .fromTo("#t-path",{duration:0.25, drawSVG: "0% 10%"}, {drawSVG:"90% 100%", ease:"none"}, "tAnimation")
 
-//         // animate the t cross bar
-//         .from("#t-cross",{duration:0.5, scaleX:0, ease: "elastic.out(1, 0.3)"}, "tAnimation")
+    tl.to("#skull",{duration: 2, 
+        motionPath:{
+            path:"#scalpel-path", 
+            align:"#scalpel-path"
+        },
+            scale: 0.7, transformOrigin:"right", ease: "expo.in"});
 
-//         // snap T back into shape
-//         .to("#t-down",{duration:0.5, scaleY:1, ease: "elastic.out(1, 0.3)"},"-=80%")
-//         return tl;
-// }
+        tl.to("#skull", {duration: 1, y: -1, x: -245});     
 
-// function eAnimation(){
-//         var tl = gsap.timeline();
-//         //rotate E 
-//         tl.from("#e", {duration:0.75, rotate: 120, ease: "elastic.out(1, 0.5)"})
-//         return tl;
-// }
+        tl.to("#m7",{rotate: -2,  x: -16.5, y: -24}, 1.9);
+        tl.to("#m8",{rotate: -1,  x: -14.5, y: -20}, 2);
+        tl.to("#m3",{rotate: -1.5,  x: -16, y: -16}, 2.1);
+        tl.to("#m4",{rotate: -1,  x: -12.5, y: -10}, 2.35);
 
-// function kAnimation(){
-//         var tl = gsap.timeline();
-//         // drop in K
-//         tl.from("#k", {duration:0.25, y:"-=200", ease: "bounce",autoAlpha:0})
-//         return tl;
-// }
+    return tl;
+}
 
-// function nAnimation(){
-//         var tl = gsap.timeline();
-//         //skew the N in
-//         tl.from("#n", {duration:0.25, scaleX:0})
-//         return tl;
-// }
+function museum(){
+    var tl = gsap.timeline(); 
 
-// function iAnimation(){
-//         var tl = gsap.timeline();
-//         // make I pop out
-//         tl.from("#i",{duration:0.5, scaleY:0, ease: "elastic.out(1, 0.5)"})
-//         return tl;
-// }
+    tl.from("#mutterMuseum",{duration: 2, y: 16, alpha: 0}, 2.2);
 
-// function tPathAnimation(){
-//         var tl = gsap.timeline();
-//          // make T path disappear
-//         tl.to("#t-path",{duration:0.25, scaleY:0})
-//         return tl;
-// }
+    return tl; 
+}
 
-// function dotAnimation(){
-//         var tl = gsap.timeline();
-//         // dot pops out and lands
-//         tl.from("#dot",{duration:0.01, autoAlpha:0})
-//         .from("#dot",{duration:1, motionPath:{path:"#dot-path", align:"#dot-path"},ease: "bounce.out"});
-//         return tl;
-// }
+
 
  var mainTL = gsap.timeline();
  mainTL.add(setup())
  .add(skullAnimation(), 2)
  .add(morphAnimation1(), 3)
+ .add(mPath(), 4)
  .add(cutPath(), 4)
-//  .add(morphAnimation2(), 1)
-// .add(eAnimation(),"-=0.25")
-// .add(kAnimation(),"-=0.6")
-// .add(nAnimation(),"-=0.35")
-// .add(iAnimation(),"-=0.6")
-// .add(tPathAnimation(),"-=0.6")
-// .add(dotAnimation(),"-=0.55")
+ .add(museum(), 5)
+
 
 
 GSDevTools.create();
+gsap.registerPlugin(MotionPathHelper);
