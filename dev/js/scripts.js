@@ -8,10 +8,28 @@ gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin);
 
 gsap.set("#d2",{transformOrigin: "center bottom"});
 gsap.set("#d2",{scaleY:0.6});
+gsap.set("#clip", {transformOrigin: "center", scale: 0}, 0); 
+gsap.set("#medium", {transformOrigin: "center", x:-17}, 0); 
+gsap.set("#smallmedium", {transformOrigin: "center", x:-28}, 0); 
+gsap.set("#small", {transformOrigin: "center", x:-35}, 0); 
 // gsap.set("#t-cross",{transformOrigin: "center"});
 // gsap.set("#i",{transformOrigin: "center bottom"});
 // gsap.set("#e",{transformOrigin: "left bottom"});
 // gsap.set("#dot",{transformOrigin: "50% 50%", xPercent:-50, yPercent:-50});
+
+function center() {
+    var tl = gsap.timeline(); 
+
+     tl.to("#clip", {duration: 1, scale: 1}, 1)
+      .to("#colors", {duration: 1.75, scale: 1.75, transformOrigin: 'center'}, 1)
+      .to("#colors", {duration: 1.5, scale: 1, transformOrigin: 'center'}, 2.3)
+      .to("#medium", {transformOrigin: "center", x: 5}, 3.2)
+      .to("#smallmedium", {transformOrigin: "center", x: 8}, 3.2)
+      .to("#small", {transformOrigin: "center", x: 8}, 3.2)
+
+
+    return tl; 
+}
 
 function dAnimation(){
                 var tl = gsap.timeline();
@@ -74,7 +92,8 @@ function secondaAnimation(){
 
 
 var mainTL = gsap.timeline();
-mainTL.add(dAnimation(), 0.5)
+mainTL.add(center(), 0)
+ .add(dAnimation(), 0.5)
  .add(hAnimation(), 0.55)
  .add(firstaAnimation(), 0.6)
  .add(rAnimation(), 0.65)
