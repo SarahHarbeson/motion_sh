@@ -15,14 +15,11 @@ gsap.set("#smallmedium", {scale: 0, transformOrigin: "bottom"}, 0);
 gsap.set("#smallmedium", {x: -28, transformOrigin: "center"}, 0); 
 gsap.set("#small", {scale: 0, transformOrigin: "bottom"}, 0); 
 gsap.set("#small", {x:-35, transformOrigin: "center"}, 0); 
-gsap.set("moving1", {scale: 0, transformOrigin:"center"}, 0); 
-gsap.set("moving2", {scale: 0, transformOrigin:"center"}, 0); 
-gsap.set("moving3", {scale: 0, transformOrigin:"center"}, 0); 
-gsap.set("moving4", {scale: 0, transformOrigin:"center"}, 0); 
-gsap.set("moving5", {scale: 0, transformOrigin:"center"}, 0); 
 
 gsap.set("#large", {scale: 0, transformOrigin: "bottom"})
 
+gsap.set("#start1", {scale: 0, transformOrigin: "bottom"})
+gsap.set("#start2", {scale: 0, transformOrigin: "bottom"})
 
 function center() {
     var tl = gsap.timeline(); 
@@ -30,11 +27,15 @@ function center() {
      tl.to("#clip", {duration: 1, scale: 1}, 1)
       .to("#colors", {duration: 1.75, scale: 1.75, transformOrigin: 'center'}, 1)
       .to("#colors", {duration: 1.5, scale: 1, transformOrigin: 'center'}, 2.3)
-      .to("#moving1", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.3)
+
+      .to("#start1", {duration: 1, scale: 0.75, transformOrigin: "bottom", color: "fff"}, 1.5)
+      .to("#start2", {duration: 1, scale: 0.75, transformOrigin: "bottom"}, 1.5)
+
       .to("#large", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.7)
       .to("#medium1", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.9)
       .to("#medium", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.9)
       .to("#smallmedium", {duration: 2, scale: 1, transformOrigin: "bottom"}, 3.1)
+
       .to("#small", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2)
       .to("#medium", {transformOrigin: "center", x: 5}, 6)
       .to("#smallmedium", {transformOrigin: "center", x: 8}, 6)
@@ -106,12 +107,12 @@ function secondaAnimation(){
 
 var mainTL = gsap.timeline();
 mainTL.add(center(), 0)
- .add(dAnimation(), 0.5)
- .add(hAnimation(), 0.55)
- .add(firstaAnimation(), 0.6)
- .add(rAnimation(), 0.65)
- .add(mAnimation(), 0.7)
- .add(secondaAnimation(), 0.75)
+ .add(dAnimation(), 1.5)
+ .add(hAnimation(), 1.55)
+ .add(firstaAnimation(), 1.6)
+ .add(rAnimation(), 1.65)
+ .add(mAnimation(), 1.7)
+ .add(secondaAnimation(), 1.75)
 // .add(dotAnimation(),"-=0.55")
 
 
