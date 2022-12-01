@@ -9,13 +9,20 @@ gsap.registerPlugin(GSDevTools, DrawSVGPlugin, MotionPathPlugin);
 gsap.set("#d2",{transformOrigin: "center bottom"});
 gsap.set("#d2",{scaleY:0.6});
 gsap.set("#clip", {transformOrigin: "center", scale: 0}, 0); 
-gsap.set("#medium", {transformOrigin: "center", x:-17}, 0); 
-gsap.set("#smallmedium", {transformOrigin: "center", x:-28}, 0); 
-gsap.set("#small", {transformOrigin: "center", x:-35}, 0); 
-// gsap.set("#t-cross",{transformOrigin: "center"});
-// gsap.set("#i",{transformOrigin: "center bottom"});
-// gsap.set("#e",{transformOrigin: "left bottom"});
-// gsap.set("#dot",{transformOrigin: "50% 50%", xPercent:-50, yPercent:-50});
+gsap.set("#medium1", {scale: 0, transformOrigin: "bottom"}, 0); 
+gsap.set("#medium", {scale: 0, transformOrigin: "bottom", x:-17}, 0); 
+gsap.set("#smallmedium", {scale: 0, transformOrigin: "bottom"}, 0); 
+gsap.set("#smallmedium", {x: -28, transformOrigin: "center"}, 0); 
+gsap.set("#small", {scale: 0, transformOrigin: "bottom"}, 0); 
+gsap.set("#small", {x:-35, transformOrigin: "center"}, 0); 
+gsap.set("moving1", {scale: 0, transformOrigin:"center"}, 0); 
+gsap.set("moving2", {scale: 0, transformOrigin:"center"}, 0); 
+gsap.set("moving3", {scale: 0, transformOrigin:"center"}, 0); 
+gsap.set("moving4", {scale: 0, transformOrigin:"center"}, 0); 
+gsap.set("moving5", {scale: 0, transformOrigin:"center"}, 0); 
+
+gsap.set("#large", {scale: 0, transformOrigin: "bottom"})
+
 
 function center() {
     var tl = gsap.timeline(); 
@@ -23,9 +30,15 @@ function center() {
      tl.to("#clip", {duration: 1, scale: 1}, 1)
       .to("#colors", {duration: 1.75, scale: 1.75, transformOrigin: 'center'}, 1)
       .to("#colors", {duration: 1.5, scale: 1, transformOrigin: 'center'}, 2.3)
-      .to("#medium", {transformOrigin: "center", x: 5}, 3.2)
-      .to("#smallmedium", {transformOrigin: "center", x: 8}, 3.2)
-      .to("#small", {transformOrigin: "center", x: 8}, 3.2)
+      .to("#moving1", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.3)
+      .to("#large", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.7)
+      .to("#medium1", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.9)
+      .to("#medium", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.9)
+      .to("#smallmedium", {duration: 2, scale: 1, transformOrigin: "bottom"}, 3.1)
+      .to("#small", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2)
+      .to("#medium", {transformOrigin: "center", x: 5}, 6)
+      .to("#smallmedium", {transformOrigin: "center", x: 8}, 6)
+      .to("#small", {transformOrigin: "center", x: 8}, 6)
 
 
     return tl; 
