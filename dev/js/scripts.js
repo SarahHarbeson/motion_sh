@@ -47,10 +47,10 @@ function center() {
       .to("#medium", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2.35)
       .to("#smallmedium", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2.5)
 
-      .to("#small", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.55)
-      .to("#medium", {transformOrigin: "center", x: 5}, 3.5)
-      .to("#smallmedium", {transformOrigin: "center", x: 8}, 3.5)
-      .to("#small", {transformOrigin: "center", x: 8}, 3.55)
+      .to("#small", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.4)
+      .to("#medium", {transformOrigin: "center", x: 5}, 3.4)
+      .to("#smallmedium", {transformOrigin: "center", x: 8}, 3.4)
+      .to("#small", {transformOrigin: "center", x: 8}, 3.4)
 
 
     return tl; 
@@ -118,12 +118,12 @@ function secondaAnimation(){
 
 var mainTL = gsap.timeline();
 mainTL.add(center(), 0)
- .add(dAnimation(), 2)
- .add(hAnimation(), 2.05)
- .add(firstaAnimation(), 2.1)
- .add(rAnimation(), 2.15)
- .add(mAnimation(), 2.2)
- .add(secondaAnimation(), 2.25)
+ .add(dAnimation(), 2.45)
+ .add(hAnimation(), 2.5)
+ .add(firstaAnimation(), 2.55)
+ .add(rAnimation(), 2.6)
+ .add(mAnimation(), 2.65)
+ .add(secondaAnimation(), 2.7)
 // .add(dotAnimation(),"-=0.55")
 
 
