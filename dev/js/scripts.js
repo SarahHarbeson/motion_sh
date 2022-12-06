@@ -16,7 +16,7 @@ gsap.set("#smallmedium", {x: -28, transformOrigin: "center"}, 0);
 gsap.set("#small", {scale: 0, transformOrigin: "bottom"}, 0); 
 gsap.set("#small", {x:-35, transformOrigin: "center"}, 0); 
 
-gsap.set("#large", {scale: 0, transformOrigin: "bottom"})
+gsap.set("#large", {scale: 0, transformOrigin: "bottom", color: "#6FEE9D"})
 
 gsap.set("#start1", {scale: 0, transformOrigin: "bottom"})
 gsap.set("#start2", {scale: 0, transformOrigin: "bottom"})
@@ -30,27 +30,27 @@ function center() {
     var tl = gsap.timeline(); 
 
      tl.to("#clip", {duration: 1, scale: 1}, 1)
-      .to("#colors", {duration: 1.75, scale: 1.5, transformOrigin: 'center'}, 1)
-      .to("#colors", {duration: 1.5, scale: 1, transformOrigin: 'center'}, 2.3)
+      .to("#colors", {duration: 1.25, scale: 1.5, transformOrigin: 'center'}, 1)
+      .to("#colors", {duration: 1.25, scale: 1, transformOrigin: 'center'}, 2.3)
 
-      .to("#start1", {duration: 1, scale: 0.5, transformOrigin: "bottom"}, 1)
-      .to("#start2", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.2)
-      .to("#start3", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.4)
-      .to("#start4", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.6)
-      .to("#start5", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.8)
-      .to("#start6", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2)
-      .to("#start7", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2.2)
+      .to("#start1", {duration: 0.75, scale: 0.5, transformOrigin: "bottom"}, 1)
+      .to("#start2", {duration: 0.75, scale: 1, transformOrigin: "bottom"}, 1.15)
+      .to("#start3", {duration: 0.75, scale: 1, transformOrigin: "bottom"}, 1.30)
+      .to("#start4", {duration: 0.75, scale: 1, transformOrigin: "bottom"}, 1.45)
+      .to("#start5", {duration: 0.75, scale: 1, transformOrigin: "bottom"}, 1.60)
+      .to("#start6", {duration: 0.75, scale: 1, transformOrigin: "bottom"}, 1.75)
+      .to("#start7", {duration: 0.75, scale: 1, transformOrigin: "bottom"}, 1.90)
 
 
-      .to("#large", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.5)
-      .to("#medium1", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.7)
-      .to("#medium", {duration: 2, scale: 1, transformOrigin: "bottom"}, 2.9)
-      .to("#smallmedium", {duration: 2, scale: 1, transformOrigin: "bottom"}, 3.1)
+      .to("#large", {duration: 1, scale: 1, transformOrigin: "bottom", color: "#327032"}, 2.05)
+      .to("#medium1", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2.20)
+      .to("#medium", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2.35)
+      .to("#smallmedium", {duration: 1, scale: 1, transformOrigin: "bottom"}, 2.5)
 
-      .to("#small", {duration: 2, scale: 1, transformOrigin: "bottom"}, 1.5)
-      .to("#medium", {transformOrigin: "center", x: 5}, 4.85)
-      .to("#smallmedium", {transformOrigin: "center", x: 8}, 4.85)
-      .to("#small", {transformOrigin: "center", x: 8}, 4.85)
+      .to("#small", {duration: 1, scale: 1, transformOrigin: "bottom"}, 1.55)
+      .to("#medium", {transformOrigin: "center", x: 5}, 3.5)
+      .to("#smallmedium", {transformOrigin: "center", x: 8}, 3.5)
+      .to("#small", {transformOrigin: "center", x: 8}, 3.55)
 
 
     return tl; 
@@ -118,12 +118,12 @@ function secondaAnimation(){
 
 var mainTL = gsap.timeline();
 mainTL.add(center(), 0)
- .add(dAnimation(), 1.5)
- .add(hAnimation(), 1.55)
- .add(firstaAnimation(), 1.6)
- .add(rAnimation(), 1.65)
- .add(mAnimation(), 1.7)
- .add(secondaAnimation(), 1.75)
+ .add(dAnimation(), 2)
+ .add(hAnimation(), 2.05)
+ .add(firstaAnimation(), 2.1)
+ .add(rAnimation(), 2.15)
+ .add(mAnimation(), 2.2)
+ .add(secondaAnimation(), 2.25)
 // .add(dotAnimation(),"-=0.55")
 
 
