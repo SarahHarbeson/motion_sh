@@ -344,7 +344,7 @@
   "projectAttributes" : {
     "creationDate" : 649104598.99548197,
     "displayValue" : "motion_sh",
-    "displayValueWasSetByUser" : 0,
+    "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets-glace",
     "iconImageWasSetByUser" : 0
   },
