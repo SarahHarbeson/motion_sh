@@ -82,9 +82,9 @@ function cutPath(){
             path:"#scalpel-path", 
             align:"#scalpel-path"
         },
-            scale: 0.7, transformOrigin:"right", ease: "expo.in"});
+            scale: 0.75, transformOrigin:"right", ease: "expo.in"});
 
-        tl.to("#skull", {duration: 1, y: -1, x: -245});     
+        tl.to("#skull", {duration: 1, y: -1, x: -235});     
 
         tl.to("#m7",{rotate: -2,  x: -16.5, y: -24}, 1.9);
         tl.to("#m8",{rotate: -1,  x: -14.5, y: -20}, 2);
